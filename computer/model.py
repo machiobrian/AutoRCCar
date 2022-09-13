@@ -48,7 +48,7 @@ class NeuralNetwork(object):
         self.model = None
 
     def create(self, layer_sizes):
-        # create neural network
+        # create neural network -. setting up an untrained model
         self.model = cv2.ml.ANN_MLP_create()
         self.model.setLayerSizes(np.int32(layer_sizes))
         self.model.setTrainMethod(cv2.ml.ANN_MLP_BACKPROP)
